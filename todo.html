@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do</title>
+    <link rel="icon" type="imagem/png" href="./assets/logo.png" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src = "js/requests.js"> </script>
+</head>
+<body>
+   <!-- Aqui vai a navbar da página-->
+    <div>
+        <nav class="navbar bg-light shadow-sm p-3">
+            <div class="container-fluid">
+              <a class="navbar-brand navTitle" href="#">
+                <img src="./assets/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top mx-3">
+                Protótipo De Página
+              </a>
+            </div>
+          </nav>
+    </div>
+
+   <!-- Aqui vão os cards das tarefas-->
+    <div class="container">
+        <div class = "d-grid gap-2 d-md-flex justify-content-md-end addTarefaButton" data-bs-toggle="modal" data-bs-target="#novaTarefaModal">
+            <button class="btn btn-success" type="button">Não clique aqui</button>  
+        </div>
+        <div class="addTarefaButton">
+
+        </div>
+        
+        <div id = "TarefaContainer">
+            
+        </div>
+
+    </div>
+
+    <!-- Aqui vai o modal de criar tarefa-->
+    <div class="modal fade" tabindex="-1" id = "novaTarefaModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">ATENSAO ATENSAO</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingTitulo" placeholder="name@example.com">
+                    <label for="floatingInput">Texto:</label>
+                  </div>
+                  <div class="form-floating">
+                    <input type="date" class="form-control" id="floatingDate" placeholder="Password">
+                    <label for="floatingPassword">Data</label>
+                  </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" onclick = "createTask()">Continue Lendo</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+    <!-- Aqui vai o modal de excluir tarefa-->
+     
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>
